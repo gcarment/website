@@ -371,6 +371,13 @@
             .experience-badge { left: 20px; }
             .profil-content { flex-direction: column; }
             .contact-wrapper { grid-template-columns: 1fr; }
+            .profil-image { 
+                flex: none; /* Annule la règle des 35% de l'ordinateur */
+                max-width: 100%; /* L'image prend la largeur de l'écran mobile */
+                width: 100%; 
+                height: auto; /* La hauteur s'ajuste proportionnellement */
+                max-height: 350px; /* Sécurité : l'image ne dépassera jamais 350px de haut pour ne pas écraser votre texte */
+            }
         }
         @media (max-width: 768px) {
             .nav-container { flex-direction: column; gap: 15px; }
