@@ -599,48 +599,54 @@
                         Vous êtes cédant, intermédiaire en M&A ou partenaire financier ? 
                         Utilisez le formulaire ci-dessous.
                     </p>
-                    <form action="mailto:guillaume@carment.fr" method="post" enctype="text/plain">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nom">Nom</label>
-                                <input type="text" id="nom" name="Nom" placeholder="Votre nom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="prenom">Prénom</label>
-                                <input type="text" id="prenom" name="Prénom" placeholder="Votre prénom" required>
-                            </div>
-                        </div>
+                    <!-- Cible invisible pour bloquer la redirection Google -->
+<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('Merci ! Votre message a bien été envoyé. Je vous recontacte très rapidement.'); document.getElementById('contact-form').reset();}"></iframe>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="Email" placeholder="votre.email@exemple.fr" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telephone">Téléphone</label>
-                                <input type="tel" id="telephone" name="Téléphone" placeholder="06 00 00 00 00">
-                            </div>
-                        </div>
+<!-- Le Formulaire -->
+<form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe0OhkCGE6p-zZwSRwjdKraLMqtPbTpXZPyowJhEyzDmsoCRg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="entry.1010639967" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="entry.1712029044" placeholder="Votre prénom" required>
+        </div>
+    </div>
 
-                        <div class="form-group">
-                            <label for="profil">Vous êtes :</label>
-                            <select id="profil" name="Profil">
-                                <option value="cedant">Cédant d'entreprise</option>
-                                <option value="intermediaire">Intermédiaire / Cabinet M&A / Conseil</option>
-                                <option value="banque">Banque / Partenaire Financier</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="entry.1576671096" placeholder="votre.email@exemple.fr" required>
+        </div>
+        <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <!-- Remplacez entry.XXXXX par le bon numéro -->
+            <input type="tel" id="telephone" name="entry.1728127546" placeholder="06 00 00 00 00">
+        </div>
+    </div>
 
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="Message" rows="4" placeholder="Présentez brièvement votre opportunité ou votre demande..." required></textarea>
-                        </div>
+    <div class="form-group">
+        <label for="profil">Vous êtes :</label>
+        <select id="profil" name="entry.773624709">
+            <option value="Cédant d'entreprise">Cédant d'entreprise</option>
+            <option value="Intermédiaire / Cabinet M&A / Conseil">Intermédiaire / Cabinet M&A / Conseil</option>
+            <option value="Banque / Partenaire Financier">Banque / Partenaire Financier</option>
+            <option value="Autre">Autre</option>
+        </select>
+    </div>
 
-                        <button type="submit" class="btn btn-primary" style="width: 100%; border: none; font-size: 1.1em; justify-content: center;">
-                            <i class="fas fa-paper-plane"></i> Envoyer le message
-                        </button>
-                    </form>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="entry.1055980508" rows="4" placeholder="Présentez brièvement votre opportunité ou votre demande..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; font-size: 1.1em; justify-content: center;">
+        <i class="fas fa-paper-plane"></i> Envoyer le message
+    </button>
+</form>
                 </div>
             </div>
         </section>
