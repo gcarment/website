@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Fond aux couleurs de votre charte (Bleu Ardoise) avec des bords arrondis -->
+  <rect width="512" height="512" rx="120" fill="#1e293b"/>
+  <!-- Initiales GC : Le G en blanc, le C en orange accent -->
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="'Segoe UI', Helvetica, sans-serif" font-weight="900" font-size="250" fill="#ffffff" letter-spacing="-5">
+    G<tspan fill="#ea580c">C</tspan>
+  </text>
+</svg>
