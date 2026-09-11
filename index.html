@@ -20,6 +20,11 @@
             --text-muted: #64748b;
             --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
+        
+        html {
+            scroll-padding-top: 120px; /* Compense la hauteur de la barre de navigation */
+            scroll-behavior: smooth;
+        }
 
         * {
             box-sizing: border-box;
@@ -392,12 +397,12 @@
     <!-- ENTÊTE DE NAVIGATION COMMUN -->
     <header>
         <div class="nav-container">
-            <a href="#accueil" class="brand" onclick="showPage('accueil')">Guillaume <span>Carment</span></a>
+            <a href="#accueil" class="brand" onclick="showPage('accueil'); return false;">Guillaume <span>Carment</span></a>
             <nav>
                 <ul>
-                    <li><a href="#accueil" id="nav-accueil" class="active" onclick="showPage('accueil')">Accueil</a></li>
-                    <li><a href="#cv-repreneur" id="nav-cv-repreneur" onclick="showPage('cv-repreneur')">Projet de Reprise</a></li>
-                    <li><a href="#contact" id="nav-contact" onclick="showPage('contact')">Contact</a></li>
+                    <li><a href="#accueil" id="nav-accueil" class="active" onclick="showPage('accueil'); return false;">Accueil</a></li>
+                    <li><a href="#cv-repreneur" id="nav-cv-repreneur" onclick="showPage('cv-repreneur'); return false;">Projet de Reprise</a></li>
+                    <li><a href="#contact" id="nav-contact" onclick="showPage('contact'); return false;">Contact</a></li>
                     <li><a href="CV_Repreneur-Guillaume_CARMENT.pdf" download class="nav-btn"><i class="fas fa-file-pdf"></i> PDF</a></li>
                 </ul>
             </nav>
@@ -420,8 +425,8 @@
                         une entreprise à taille humaine dans le Nord-Ouest Lyonnais.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#cv-repreneur" class="btn btn-primary" onclick="showPage('cv-repreneur')"><i class="fas fa-bullseye"></i> Découvrir mon projet</a>
-                        <a href="#contact" class="btn btn-outline" onclick="showPage('contact')"><i class="fas fa-envelope"></i> Prendre contact</a>
+                        <a href="#cv-repreneur" class="btn btn-primary" onclick="showPage('cv-repreneur'); return false;"><i class="fas fa-bullseye"></i> Découvrir mon projet</a>
+                        <a href="#contact" class="btn btn-outline" onclick="showPage('contact'); return false;"><i class="fas fa-envelope"></i> Prendre contact</a>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
