@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet de reprise — Guillaume Carment (confidentiel)</title>
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Document privé — projet de reprise d’entreprise.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+:root {
+  --bg: #f4f8fb;
+  --bg-alt: #e8f2f4;
+  --surface: #ffffff;
+  --ink: #0f2744;
+  --ink-soft: #3a516b;
+  --muted: #6a7f94;
+  --accent: #0b6e99;
+  --accent-2: #1f8a70;
+  --accent-wash: #d7eef8;
+  --teal-wash: #d8f3ea;
+  --line: #d5e4ec;
+  --radius: 14px;
+  --shadow: 0 10px 36px rgba(15, 39, 68, 0.07);
+  --font: "Source Sans 3", system-ui, sans-serif;
+  --display: "Space Grotesk", system-ui, sans-serif;
+  --nav-h: 64px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.65; font-size: 1.02rem; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { padding-left: 1.15rem; }
+li { margin-bottom: .45rem; color: var(--ink-soft); }
+.wrap { width: min(1120px, calc(100% - 2.5rem)); margin-inline: auto; }
+
+header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(14px);
+  background: rgba(244, 248, 251, 0.94);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  height: var(--nav-h); display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem;
+}
+.brand { font-family: var(--display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.03em; }
+.brand span { color: var(--accent); }
+.nav-actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .7rem 1.15rem; border-radius: 10px; font-weight: 700; font-size: .95rem;
+  border: 1px solid transparent; transition: .15s ease;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { filter: brightness(1.06); }
+.btn-ghost { background: var(--surface); border-color: var(--line); color: var(--ink); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+.warn {
+  background: #fff6e8;
+  border: 1px solid #f0d6a8;
+  color: var(--ink);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0 2rem;
+  font-size: .95rem;
+}
+.warn strong { color: #9a5b00; }
+
+.page-head {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 1rem; flex-wrap: wrap; margin-top: 2rem; margin-bottom: 1.25rem;
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .78rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: .5rem;
+}
+.eyebrow::before { content: ""; width: 1.1rem; height: 3px; background: var(--accent); border-radius: 2px; }
+h1, h2, h3 { font-family: var(--display); letter-spacing: -0.03em; }
+h1 { font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.15; }
+h1 span, h2 span { color: var(--accent); }
+.page-head p { color: var(--muted); }
+
+.pitch {
+  background: linear-gradient(125deg, #0f2744 0%, #134e6f 48%, #1f8a70 100%);
+  color: #fff; border-radius: 16px; padding: 1.5rem 1.6rem; margin-bottom: 2.25rem;
+  font-size: 1.08rem; box-shadow: var(--shadow);
+}
+.pitch strong { color: #b8f0d8; }
+
+.section-title {
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  margin: 2.25rem 0 1rem;
+  text-align: left;
+}
+
+.grid-4 {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+}
+.grid-2 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+}
+.sector-card, .card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+}
+.sector-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; background: var(--bg-alt); }
+.sector-content, .card { padding: 1.15rem 1.2rem 1.35rem; }
+.sector-card h3, .card h3 {
+  font-size: 1.05rem; margin-bottom: .45rem; display: flex; align-items: center; gap: .5rem;
+}
+.sector-card h3 i, .card h3 i { color: var(--accent); }
+.sector-card p { color: var(--ink-soft); font-size: .94rem; }
+.card-icon {
+  width: 2.4rem; height: 2.4rem; border-radius: 10px;
+  display: grid; place-items: center;
+  background: var(--accent-wash); color: var(--accent); margin-bottom: .75rem;
+}
+
+.timeline { display: grid; gap: 1rem; }
+.timeline-item {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.15rem 1.25rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--accent);
+}
+.timeline-date {
+  font-size: .8rem; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--accent-2); margin-bottom: .35rem;
+}
+.timeline-title { font-family: var(--display); font-size: 1.05rem; margin-bottom: .4rem; }
+.timeline-item p { color: var(--ink-soft); font-size: .95rem; }
+
+footer {
+  padding: 2rem 0 2.5rem; color: var(--muted); font-size: .9rem;
+  border-top: 1px solid var(--line); margin-top: 2.5rem;
+}
+.footer-row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+footer a { color: var(--ink-soft); }
+footer a:hover { color: var(--accent); }
+
+@media (max-width: 980px) {
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+  .grid-4, .grid-2 { grid-template-columns: 1fr; }
+  .wrap { width: min(1120px, calc(100% - 1.5rem)); }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Guillaume <span>Carment</span> · privé</div>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="CV_Repreneur-Guillaume_CARMENT.pdf" download>
+          <i class="fas fa-download" aria-hidden="true"></i> Télécharger (PDF)
+        </a>
+        <a class="btn btn-ghost" href="../contact.html">Contact public</a>
+        <a class="btn btn-ghost" href="../index.html">Site public</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="page-head">
+        <div>
+          <div class="eyebrow">Stratégie &amp; périmètre</div>
+          <h1>Le Projet <span>de Reprise</span></h1>
+          <p>Document privé — reprise d’une entreprise à taille humaine.</p>
+        </div>
+        <a class="btn btn-primary" href="CV_Repreneur-Guillaume_CARMENT.pdf" download>
+          <i class="fas fa-download" aria-hidden="true"></i> CV Repreneur (PDF)
+        </a>
+      </div>
+
+      <div class="pitch">
+        « Ce qui me définit avant tout, c’est mon <strong>tempérament fonceur</strong> :
+        lorsque je suis convaincu par un projet, je m’y engage pleinement, sans crainte des défis.
+        Je crois en la valeur du travail, en l’ingéniosité de l’approche, et en l’intelligence collective
+        pour franchir chaque obstacle. »
+      </div>
+
+      <h2 class="section-title">Secteurs <span>visés</span></h2>
+      <div class="grid-4">
+        <article class="sector-card">
+          <img src="../images/bois.jpg" alt="Filière bois">
+          <div class="sector-content">
+            <h3><i class="fas fa-tree" aria-hidden="true"></i> Le Bois</h3>
+            <p>Passionné par le travail du bois et la fabrication artisanale. Ma pratique régulière m’a appris la rigueur de la conception, l’agilité face aux imprévus, et la satisfaction du travail bien pensé, étape par étape.</p>
+          </div>
+        </article>
+        <article class="sector-card">
+          <img src="../images/domotique.jpg" alt="Domotique">
+          <div class="sector-content">
+            <h3><i class="fas fa-home" aria-hidden="true"></i> La Domotique</h3>
+            <p>Curieux et technophile, je teste et intègre continuellement des solutions Smart Home. Je sais évaluer la robustesse technique d’une offre et la valeur d’usage qu’elle apporte aux clients (B2C/B2B).</p>
+          </div>
+        </article>
+        <article class="sector-card">
+          <img src="../images/sport-secteur.jpg" alt="Sport">
+          <div class="sector-content">
+            <h3><i class="fas fa-running" aria-hidden="true"></i> Le Sport</h3>
+            <p>Pratiquant engagé (voile, vélo, wingfoil…), j’ai une compréhension intuitive des exigences de l’équipementier. J’allie regard de l’utilisateur final et vision de développement produit.</p>
+          </div>
+        </article>
+        <article class="sector-card">
+          <img src="../images/industrie.jpg" alt="Industrie">
+          <div class="sector-content">
+            <h3><i class="fas fa-industry" aria-hidden="true"></i> L’Industrie</h3>
+            <p>Attiré par les défis d’optimisation et d’innovation des parcours de production. Mon esprit ingénieux et structuré s’épanouit dans la résolution de problématiques industrielles concrètes.</p>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="section-title">Cadre de <span>la recherche</span></h2>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
+          <h3>L’entreprise cible</h3>
+          <ul>
+            <li><strong>Localisation :</strong> Nord-Ouest Lyonnais (proximité immédiate)</li>
+            <li><strong>Données économiques :</strong> CA de 800 K€ à 2,5 M€</li>
+            <li><strong>Santé financière :</strong> In bonis, saine et à développer</li>
+            <li><strong>Rentabilité attendue :</strong> EBE &gt; 100 K€ (capable de couvrir le service d’une dette LBO)</li>
+            <li><strong>Effectif :</strong> ~10 collaborateurs (équipe autonome et stable)</li>
+            <li><strong>Caractéristiques :</strong> savoir-faire technique, positionnement haut / milieu de gamme, clientèle diversifiée</li>
+            <li><strong>Caractéristiques qualitatives :</strong> CA stable, plusieurs années d’expérience, récurrence contractuelle sur une partie du CA</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-coins" aria-hidden="true"></i></div>
+          <h3>Financement &amp; conditions</h3>
+          <ul>
+            <li><strong>Apport personnel :</strong> 100 000 € (fonds propres)</li>
+            <li><strong>Valorisation ciblée :</strong>
+              <ul>
+                <li><strong>Cible privilégiée (solo) :</strong> 400 K€ à 800 K€ (leviers classiques et prêts d’honneur)</li>
+                <li><strong>Cible opportuniste (jusqu’à 1,5 M€) :</strong> capacité à structurer un LBI avec syndication d’un pool de Business Angels mobilisables</li>
+              </ul>
+            </li>
+            <li><strong>Concours financiers :</strong> prêts d’honneur, réseau de Business Angels, co-investisseur, emprunt bancaire senior</li>
+            <li><strong>Montage souhaité :</strong> LBO / LBI avec intégration stratégique d’un crédit vendeur (10 à 20 %) pour garantir l’alignement des intérêts avec le cédant</li>
+            <li><strong>Modalités de reprise :</strong> prise de participation totale (cible privilégiée) ou majoritaire (si co-investissement). Transition dynamique avec accompagnement court (3 à 6 mois) par le cédant</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="section-title">Parcours <span>professionnel</span></h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">2017 — Aujourd’hui</div>
+          <div class="timeline-title">Directeur d’agence associé / Directeur de l’offre · apini (by Extia)</div>
+          <p>Ouverture et développement de l’agence lyonnaise, gestion du P&amp;L, recrutement et management (jusqu’à 50 collaborateurs). Création d’un portefeuille de +50 clients (Métropole de Clermont, Départements 69 et 93, SDMIS, Frénéhard). Structuration des offres de conseil (stratégie SI, organisation, PMO).</p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">2014 — 2017</div>
+          <div class="timeline-title">Business Manager &amp; Consultant Manager · Shift Consulting</div>
+          <p>Prospection, développement commercial et gestion d’un P&amp;L (~2 M€). Recrutement et formation de consultants. Pilotage et sécurisation de projets complexes pour grands comptes (EDF, Véolia, Eau du Grand Lyon).</p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">2008 — 2014</div>
+          <div class="timeline-title">Consultant Senior &amp; Chef de projet · CGI Business Consulting</div>
+          <p>Accompagnement stratégique, AMOE et AMOA pour grands comptes. Mise en place d’outils de gestion de portefeuilles de projets (PPM) pour EDF. Pilotage documentaire chez Renault Trucks.</p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">2004 — 2007</div>
+          <div class="timeline-title">Responsable d’agence (centre de profit) · Holiday Bikes (Groupe ADA)</div>
+          <p>Gestion d’une agence de location de véhicules de prestige et deux-roues. Management de 4 salariés, suivi financier (P&amp;L), création du système d’information de la franchise (40 agences).</p>
+        </article>
+      </div>
+
+      <div class="grid-2" style="margin-top: 1.5rem; margin-bottom: 1rem;">
+        <div class="card">
+          <h3><i class="fas fa-graduation-cap" aria-hidden="true"></i> Diplômes &amp; certifications</h3>
+          <ul>
+            <li><strong>Reprise d’entreprise :</strong> formation CCRA — EM Lyon</li>
+            <li><strong>2008 :</strong> Mastère Spécialisé Management des SI — EM Lyon / École Centrale</li>
+            <li><strong>2004 :</strong> Diplôme Marketing &amp; Management Européen — IDRAC Lyon</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-handshake" aria-hidden="true"></i> Équipe de conseils</h3>
+          <ul>
+            <li><strong>Réseau d’accompagnement :</strong> Réseau CRA / CCRA</li>
+            <li><strong>Conseil juridique &amp; comptable :</strong> cabinet d’avocats d’affaires &amp; expert-comptable</li>
+            <li><strong>Accompagnement institutionnel :</strong> conseillers divers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>Document privé — Guillaume Carment</span>
+      <span>
+        <a href="../index.html">← Retour au site public</a>
+        &nbsp;·&nbsp;
+        <a href="../contact.html">Contact</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

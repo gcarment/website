@@ -1,0 +1,43 @@
+Dossier images — photos du site
+================================
+Remplace n’importe quel fichier en gardant le MÊME nom.
+
+GLOBAL
+  portrait.jpg          Menu (avatar) — index, contact
+  montagne.jpg          Accueil (paysage) + galerie rando
+
+BRICOLAGE
+  bricolage.jpg         Carte + bandeau modale
+  bricolage-1.jpg       Galerie 1
+  bricolage-2.jpg       Galerie 2
+  bricolage-3.jpg       Galerie 3
+
+DOMOTIQUE
+  domotique.jpg         Carte + bandeau (+ galerie)
+  domotique-1.jpg       Galerie
+  domotique-solaire.jpg Galerie énergie
+
+APPS
+  apps.jpg              Carte + bandeau
+  bateau.jpg            Galerie apps + galerie wingfoil
+  apps-ecran.jpg        Galerie
+  apps-mobile.jpg       Galerie
+
+VÉLO
+  velo.jpg              Carte + bandeau
+  velo-1.jpg            Galerie
+  velo-2.jpg            Galerie
+
+WINGFOIL
+  wingfoil.jpg          Carte + bandeau
+  mer.jpg               Galerie
+
+RANDO / VOLLEY
+  rando.jpg             Carte + bandeau
+  volleyball.jpg        Galerie
+
+PAGE PRIVÉE (p/projet.html)
+  bois.jpg              Secteur Bois
+  domotique.jpg         (partagé)
+  sport-secteur.jpg     Secteur Sport
+  industrie.jpg         Secteur Industrie

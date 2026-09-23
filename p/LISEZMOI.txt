@@ -1,0 +1,3 @@
+Place ici le PDF : CV_Repreneur-Guillaume_CARMENT.pdf
+Il est lié depuis projet.html (même dossier p/).
+Cette page est privée : robots.txt Disallow /p/ + meta noindex.
