@@ -76,8 +76,22 @@ header {
 .warn strong { color: #9a5b00; }
 
 .page-head {
-  display: flex; justify-content: space-between; align-items: flex-end;
-  gap: 1rem; flex-wrap: wrap; margin-top: 2rem; margin-bottom: 1.25rem;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1.25rem; flex-wrap: wrap; margin-top: 2rem; margin-bottom: 1.25rem;
+}
+.profile {
+  display: flex; align-items: center; gap: 1.15rem; min-width: min(100%, 34rem);
+}
+.profile-photo {
+  width: 112px; aspect-ratio: 4/5; flex-shrink: 0;
+  border-radius: 14px; overflow: hidden;
+  background: var(--bg-alt); border: 1px solid var(--line); box-shadow: var(--shadow);
+}
+.profile-photo img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 18%;
+}
+.page-head p.team-note {
+  margin-top: .55rem; color: var(--accent-2); font-weight: 700;
 }
 .eyebrow {
   display: inline-flex; align-items: center; gap: .5rem;
@@ -154,6 +168,9 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 700px) {
   .grid-4, .grid-2 { grid-template-columns: 1fr; }
   .wrap { width: min(1120px, calc(100% - 1.5rem)); }
+  .profile { align-items: flex-start; }
+  .profile-photo { width: 84px; }
+  .page-head { align-items: flex-start; }
 }
   </style>
 </head>
@@ -175,10 +192,16 @@ footer a:hover { color: var(--accent); }
     <div class="wrap">
 
       <div class="page-head">
-        <div>
-          <div class="eyebrow">Stratégie &amp; périmètre</div>
-          <h1>Le Projet <span>de Reprise</span></h1>
-          <p>Document privé — reprise d’une entreprise à taille humaine.</p>
+        <div class="profile">
+          <div class="profile-photo">
+            <img src="../images/portrait.jpg" alt="Guillaume Carment" width="1068" height="1600" decoding="async">
+          </div>
+          <div>
+            <div class="eyebrow">Stratégie &amp; périmètre</div>
+            <h1>Le Projet <span>de Reprise</span></h1>
+            <p>Document privé — reprise d’une entreprise à taille humaine.</p>
+            <p class="team-note">Une équipe de repreneurs déjà identifiée.</p>
+          </div>
         </div>
         <a class="btn btn-primary" href="CV_Repreneur-Guillaume_CARMENT.pdf" download>
           <i class="fas fa-download" aria-hidden="true"></i> CV Repreneur (PDF)
@@ -243,7 +266,7 @@ footer a:hover { color: var(--accent); }
           <div class="card-icon"><i class="fas fa-coins" aria-hidden="true"></i></div>
           <h3>Financement &amp; conditions</h3>
           <ul>
-            <li><strong>Apport personnel :</strong> 100 000 € (fonds propres)</li>
+            <li><strong>Apport personnel :</strong> entre 300 K€ et 500 K€ (fonds propres)</li>
             <li><strong>Valorisation ciblée :</strong>
               <ul>
                 <li><strong>Cible privilégiée (solo) :</strong> 400 K€ à 800 K€ (leviers classiques et prêts d’honneur)</li>
@@ -251,7 +274,7 @@ footer a:hover { color: var(--accent); }
               </ul>
             </li>
             <li><strong>Concours financiers :</strong> prêts d’honneur, réseau de Business Angels, co-investisseur, emprunt bancaire senior</li>
-            <li><strong>Montage souhaité :</strong> LBO / LBI avec intégration stratégique d’un crédit vendeur (10 à 20 %) pour garantir l’alignement des intérêts avec le cédant</li>
+            <li><strong>Montage souhaité :</strong> LBO / LBI, structuré autour des fonds propres, des prêts d’honneur et de l’emprunt bancaire senior</li>
             <li><strong>Modalités de reprise :</strong> prise de participation totale (cible privilégiée) ou majoritaire (si co-investissement). Transition dynamique avec accompagnement court (3 à 6 mois) par le cédant</li>
           </ul>
         </div>
@@ -285,7 +308,7 @@ footer a:hover { color: var(--accent); }
         <div class="card">
           <h3><i class="fas fa-graduation-cap" aria-hidden="true"></i> Diplômes &amp; certifications</h3>
           <ul>
-            <li><strong>Reprise d’entreprise :</strong> formation CCRA — EM Lyon</li>
+            <li><strong>Reprise d’entreprise :</strong> formation CCRE — Club des Créateurs et Repreneurs d’Entreprise de l’EM Lyon</li>
             <li><strong>2008 :</strong> Mastère Spécialisé Management des SI — EM Lyon / École Centrale</li>
             <li><strong>2004 :</strong> Diplôme Marketing &amp; Management Européen — IDRAC Lyon</li>
           </ul>
@@ -293,7 +316,7 @@ footer a:hover { color: var(--accent); }
         <div class="card">
           <h3><i class="fas fa-handshake" aria-hidden="true"></i> Équipe de conseils</h3>
           <ul>
-            <li><strong>Réseau d’accompagnement :</strong> Réseau CRA / CCRA</li>
+            <li><strong>Réseau d’accompagnement :</strong> Réseau CRA / CCRE</li>
             <li><strong>Conseil juridique &amp; comptable :</strong> cabinet d’avocats d’affaires &amp; expert-comptable</li>
             <li><strong>Accompagnement institutionnel :</strong> conseillers divers</li>
           </ul>
